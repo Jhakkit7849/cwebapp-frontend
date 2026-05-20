@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
@@ -36,8 +36,7 @@ export default function App() {
       <Navbar />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="" element={<Home />} />
+          <Route path="/" element={<Navigate to="/lessons" replace />} />
 
           {/* guest-only */}
           <Route path="/login" element={<RequireGuest><Login /></RequireGuest>} />
