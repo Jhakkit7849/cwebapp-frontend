@@ -36,8 +36,8 @@ export default function App() {
       <Navbar />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Navigate to="/lessons" replace />} />
           <Route path="/" element={<Home />} />
+          <Route path="" element={<Home />} />
 
           {/* guest-only */}
           <Route path="/login" element={<RequireGuest><Login /></RequireGuest>} />
